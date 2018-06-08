@@ -90,4 +90,20 @@ export default {
     }
   }
 }
+
+@media (max-width: 991px) {
+
+  .navbar {
+    .login {
+      width: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-inline .form-control {
+      width: 100%;
+    }
+  }
+}
 </style>
