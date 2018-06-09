@@ -2,16 +2,22 @@
   <div class="index">
     <intro/>
     <assuntos/>
+    <depoimentos/>
+    <grupos/>
   </div>
 </template>
 
 <script>
 import Intro from '@/components/index/Intro'
 import Assuntos from '@/components/index/Assuntos'
+import Depoimentos from '@/components/index/Depoimentos'
+import Grupos from '@/components/index/Grupos'
 export default {
   components: {
     Intro,
-    Assuntos
+    Assuntos,
+    Depoimentos,
+    Grupos
   }
 }
 </script>

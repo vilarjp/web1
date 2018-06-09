@@ -52,6 +52,10 @@ export default {
       &:last-child {
         margin-bottom: 0;
       }
+
+      .imagem {
+        height: 180px;
+      }
     }
   }
 }

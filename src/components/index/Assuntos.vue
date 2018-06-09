@@ -8,7 +8,7 @@
         <div class="titulo">
           <section-titulo>
             Assuntos
-          </section-titulo> 
+          </section-titulo>
         </div>
         <div class="assuntos-listagem">
           <assuntos-lista/>
@@ -43,7 +43,7 @@ export default {
 
       .fa-angle-down {
         font-weight: bold;
-        font-size: 60px;
+        font-size: 80px;
       }
     }
 
