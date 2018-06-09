@@ -2,7 +2,9 @@
   <div id="app">
     <nav-header/>
     <nav-bar/>
-    <router-view/>
+    <main>
+      <router-view/>
+    </main>
     <page-footer/>
   </div>
 </template>
@@ -23,4 +25,16 @@ export default {
 
 <style lang="scss">
 
+#app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
 </style>
