@@ -109,6 +109,14 @@ export default {
 
     ul.navbar-nav.mr-auto {
       margin: 20px 0 10px 0 !important;
+
+      li {
+        margin-right: 50px;
+
+        a {
+          padding: 8px 0;
+        }
+      }
     }
 
     form.form-inline.my-2.my-lg-0 {
@@ -129,6 +137,11 @@ export default {
     .form-inline .form-control {
       width: 100%;
     }
+  }
+
+  .navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
+    padding: 0 15px;
+    margin-top: 20px;
   }
 }
 </style>
