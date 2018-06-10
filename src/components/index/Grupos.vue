@@ -2,11 +2,8 @@
   <section class="section-grupos">
     <div class="container">
       <div class="grupos">
-        <div class="arrow-up">
-          <i class="fa fa-angle-up" aria-hidden="true"></i>
-        </div>
         <div class="titulo">
-          <h3>Junte-se aos nossos grupos</h3>
+          <section-titulo>APOIO</section-titulo>
         </div>
         <div class="carrossel">
           <carousel
@@ -14,25 +11,25 @@
           :perPageCustom="[[320, 1], [768, 3], [992, 5]]"
           >
             <slide>
-              <img src="https://followthecolours.com.br/wp-content/uploads/2016/05/follow-the-colours-curiosidades-cor-preta-cinza-pexels-grey.jpg" alt="">
+              <img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/02/Total-png-logo-download.png" alt="">
             </slide>
             <slide>
-              <img src="https://followthecolours.com.br/wp-content/uploads/2016/05/follow-the-colours-curiosidades-cor-preta-cinza-pexels-grey.jpg" alt="">
+              <img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/02/Total-png-logo-download.png" alt="">
             </slide>
             <slide>
-              <img src="https://followthecolours.com.br/wp-content/uploads/2016/05/follow-the-colours-curiosidades-cor-preta-cinza-pexels-grey.jpg" alt="">
+              <img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/02/Total-png-logo-download.png" alt="">
             </slide>
             <slide>
-              <img src="https://followthecolours.com.br/wp-content/uploads/2016/05/follow-the-colours-curiosidades-cor-preta-cinza-pexels-grey.jpg" alt="">
+              <img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/02/Total-png-logo-download.png" alt="">
             </slide>
             <slide>
-              <img src="https://followthecolours.com.br/wp-content/uploads/2016/05/follow-the-colours-curiosidades-cor-preta-cinza-pexels-grey.jpg" alt="">
+              <img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/02/Total-png-logo-download.png" alt="">
             </slide>
             <slide>
-              <img src="https://followthecolours.com.br/wp-content/uploads/2016/05/follow-the-colours-curiosidades-cor-preta-cinza-pexels-grey.jpg" alt="">
+              <img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/02/Total-png-logo-download.png" alt="">
             </slide>
             <slide>
-              <img src="https://followthecolours.com.br/wp-content/uploads/2016/05/follow-the-colours-curiosidades-cor-preta-cinza-pexels-grey.jpg" alt="">
+              <img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/02/Total-png-logo-download.png" alt="">
             </slide>
           </carousel>
         </div>
@@ -52,6 +49,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
   .section-grupos {
     .grupos {
@@ -60,19 +59,21 @@ export default {
       align-items: center;
       flex-direction: column;
 
-      .arrow-up {
-        .fa-angle-up {
-          font-weight: bold;
-          font-size: 60px;
-        }
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      p {
+        margin-bottom: 0;
+        text-align: justify;
       }
 
       .titulo {
-        width: 100%;
-        h3 {
-          text-align: left;
+          font-family: 'Roboto', sans-serif;
+          font-weight: bolder;
+          color: #433D52;
           margin-bottom: 30px;
-        }
+          font-size: 30px;
       }
 
       .carrossel {
@@ -94,6 +95,7 @@ export default {
           }
         }
       }
+
     }
   }
 </style>

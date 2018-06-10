@@ -51,6 +51,7 @@ export default {
 
   .intro {
     padding: 50px 0;
+    z-index: 3;
 
     .titulo {
       h1 {

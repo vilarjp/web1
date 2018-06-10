@@ -16,7 +16,7 @@
               <a class="nav-link" href="#" >COMENTÁRIOS</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#">GRUPOS</a>
+              <a class="nav-link" href="#">APOIO</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link" href="#">CONTATO</a>
