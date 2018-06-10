@@ -48,10 +48,11 @@ export default {
     display: flex;
     align-items: center;
   }
+.container{
+  z-index: 3;
 
   .intro {
     padding: 50px 0;
-    z-index: 3;
 
     .titulo {
       h1 {
@@ -68,5 +69,6 @@ export default {
       }
     }
   }
+}
 }
 </style>

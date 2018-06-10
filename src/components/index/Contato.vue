@@ -6,7 +6,26 @@
           <div class="left">
             <h3>ENTRE EM CONTATO</h3>
             <p>Quer saber mais sobre o Manal, oferecer apoio ou escrever uma matéria
-              sobre ? Manda um email! Retornaremos assim que possível.</p>
+              sobre ? Manda um email! Retornaremos assim que possível. Conheça também nossas redes.</p>
+              <div class="redes">
+                <ul>
+                  <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                      <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/" target="_blank">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
           </div>
           <div class="right">
             <form>
@@ -36,17 +55,17 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 50px 0 30px 0;
+
 
   .sobreposicao{
     background: #312552;
-    position: relative;
     color: #ffffff;
     opacity: 0.9;
     z-index: 2;
-    height: 100%;
     display: flex;
     align-items: center;
+    background-size: cover;
+    padding: 50px 0 30px 0;
   }
   .container{
     z-index: 3;
@@ -57,7 +76,6 @@ export default {
     justify-content: space-between;
 
     .left {
-
       color: #fff;
       h3 {
         font-family: 'Roboto', sans-serif;
@@ -78,6 +96,36 @@ export default {
         &:last-child {
           margin: 0;
         }
+      }
+
+      .redes {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+
+          ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+              margin-left: 10px;
+            }
+          }
+
+
+          a {
+          color: #7D5DD2;
+          font-size: 45px;
+          margin-left: 20px;
+        }
+        a:hover {
+          color: #fff;
+        }
+
+
       }
     }
 
