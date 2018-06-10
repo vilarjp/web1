@@ -119,7 +119,6 @@ export default {
             cursor: pointer;
           }
         }
-
         .login-face {
 
           a {

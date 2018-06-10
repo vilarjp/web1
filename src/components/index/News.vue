@@ -1,12 +1,11 @@
 <template lang="html">
   <section>
     <div class="container">
-      <div class="assuntos">
+      <div class="news">
         <div class="arrow-down" style="color:#433D52">
           <i class="fa fa-angle-down" aria-hidden="true"></i>
         </div>
         <div class="titulo">
-          <section-titulo>VAMOS FALAR SIM</section-titulo>
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-6">
