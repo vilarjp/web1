@@ -1,39 +1,31 @@
 <template lang="html">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <router-link :to="{ name: 'Index', params: {} }" class="navbar-brand">LOGO</router-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <router-link :to="{ name: 'Index', params: {} }" class="nav-link">Inicial</router-link>
+            <li class="nav-item dropdown">
+              <router-link :to="{ name: 'Index', params: {} }" class="nav-link">INICIAL</router-link>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Sobre nós
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
+              <a class="nav-link" href="#" >SOBRE NÓS</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Citações</a>
-            </li>
-            <li class="nav-item login">
-              <router-link class="nav-link" :to="{ name: 'Login', params: {} }">Entrar</router-link>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">CITAÇÕES</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" aria-label="Search">
-            <button class="botao-busca" type="submit">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </form>
+        </div>
+        <div class="collapse navbar-collapse login">
+          <ul>
+            <li class="nav-item login">
+              <router-link class="nav-link" :to="{ name: 'Login', params: {} }">ENTRAR</router-link>
+            </li>
+            <li class="nav-item login">
+              <router-link class="nav-link" :to="{ name: 'Singup', params: {} }" style="padding-right: 0px;">JUNTE-SE A NÓS</router-link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -45,30 +37,78 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .navbar {
-
   a.navbar-brand,
   a.nav-link {
-    color: gray !important;
+    color: #4f4f4f;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: lighter;
   }
+
+  .navbar-collapse.login{
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-right: 0px;
+
+    ul{
+      list-style-type::none;
+      margin: 20px 0 10px 0 !important;
+      display: flex;
+
+      a.nav-link{
+        color:#8a7f80;
+        font-size: 14px;
+      }
+      a.nav-link:hover{
+        color:#7D5DD2;
+      }
+    }
+  }
+
+  #navbarSupportedContent .nav-item .nav-link::before {
+   content: "";
+   position: absolute;
+   z-index: 2;
+   left: 0;
+   right: 0;
+  }
+
+  #navbarSupportedContent .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    right: 100%;
+    bottom: 50%;
+    background: #7D5DD2; /*** COLOR OF THE LINE ***/
+    height: 3px; /*** THICKNESS OF THE LINE ***/
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+    #navbarSupportedContent .nav-item .nav-link:hover {
+      opacity: 1 !important;
+    }
+    #navbarSupportedContent .nav-item .nav-link:hover:before {
+     right: 0;
+    }
+    #navbarSupportedContent .nav-item .nav-link:before {
+     bottom: 10%;
+    }
 
   .navbar-collapse {
     flex-direction: column-reverse;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
 
     ul.navbar-nav.mr-auto {
       margin: 20px 0 10px 0 !important;
-
-      .login {
-        background: gray;
-        border-radius: 5px;
-      }
-
-      li.nav-item.login a.nav-link {
-        color: #fff !important;
-      }
     }
 
     form.form-inline.my-2.my-lg-0 {
@@ -76,16 +116,8 @@ export default {
       display: flex;
       justify-content: flex-end;
 
-      input {
+    input {
         margin-right: 0 !important;
-      }
-
-      button.botao-busca {
-        position: absolute;
-        background: transparent;
-        border: none;
-        right: 5px;
-        color: gray;
       }
     }
   }
@@ -94,13 +126,6 @@ export default {
 @media (max-width: 991px) {
 
   .navbar {
-    .login {
-      width: 70px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     .form-inline .form-control {
       width: 100%;
     }

@@ -12,6 +12,6 @@ export default {
 
 <style lang="scss">
   .section-titulo {
-    
+
   }
 </style>

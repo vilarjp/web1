@@ -3,23 +3,28 @@
       <div class="container">
         <div class="header">
           <div class="left">
-            <a href="#">Link</a>
+            <router-link :to="{ name: 'Index', params: {} }" class="navbar-brand"><img src="@/assets/logoRuim.png" alt=""></router-link>
           </div>
           <div class="right">
             <ul>
               <li>
-                <a href="#">
-                  <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                <a href="#"> <!-- add algum efeito java script -->
+                  <i class="fa fa-search" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-youtube-square" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>
@@ -37,7 +42,12 @@ export default {
 <style lang="scss">
 
   header {
-    background: #000;
+    background: #fff;
+
+    img{
+      width: 25%;
+      padding: 5px;
+    }
 
     .header {
       display: flex;
@@ -59,15 +69,16 @@ export default {
 
       .right li a,
       .left a {
-        color: lightgray;
-        font-size: 30px;
+        color: #7D5DD2;
+        font-size: 22px;
+        margin-left: 10px;
       }
 
       .right li a:hover,
       .right li a:focus,
       .left a:hover,
       .left a:focus {
-        color: gray;
+        color: #433D52;
         text-decoration: none !important;
       }
     }

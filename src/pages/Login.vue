@@ -121,7 +121,7 @@ export default {
         }
 
         .login-face {
-          
+
           a {
             text-decoration: none;
             display: flex;
