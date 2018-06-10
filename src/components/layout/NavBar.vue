@@ -29,7 +29,7 @@
               <router-link class="nav-link" :to="{ name: 'Login', params: {} }">ENTRAR</router-link>
             </li>
             <li class="nav-item login">
-              <router-link class="nav-link" :to="{ name: 'Singup', params: {} }" style="padding-right: 0px;">JUNTE-SE A NÓS</router-link>
+              <router-link class="nav-link" :to="{ name: 'Cadastro', params: {} }" style="padding-right: 0px;">JUNTE-SE A NÓS</router-link>
             </li>
           </ul>
         </div>

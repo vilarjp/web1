@@ -82,6 +82,7 @@ export default {
           height: 50px;
           margin: 0 auto;
           bottom: 20px;
+          border: none;
         }
       }
     }
