@@ -19,9 +19,7 @@
           </div>
           <div class="col-md-6 col-lg-6">
             <p class="text_nomes">
-              <span style="color:#433D52"> Andrea • Andrea • Andrea • Andreia • Andreza • Âni • Aninha • Aninha • Anna • Anna Clara • Antonio Carlos • Antonio • Ariane • Arthur • Arthur • Arthur • Aurelio • Auta • Awdrey • Barbara • Bárbara • Beatriz • Beatriz • Beatriz • Belmiro • Bernardo • Bianca • Brenda • Brenda • Bru • Bruma • Bruna • Bruna • Bruna • Bruna • Brunna • Caio • Caio • Camila • Camila • Camila • Camila • Camila • Camila • Camilla • Camilla </span> <span style="color:#7D5DD2"> • Candida • Carla • Carla • Carlos • Carmelita • Carol • Carolina • Carolina • Carolina • Carolina • Carolina • Carolina • Carolina • Carolina • Carolina • Carolina • Caroline • Catarina • Catarina • Cecilia • Cecilia • Cecília • Cecília • Chris • Ciel • Cintia • Clareana • Claudia • Claudia • Clecia • Cleydyr • Cris • Cristiana • Cristiana • Cristiana • Cristiano • Cristiano • Cristina • Cristine • Damiao • Dani • Daniela • Daniela • Daniela • Daniela • Daniela • Daniella </span> <span style="color:#B1A2D9">
-                • Danielle • Danuza • David • Debora • Débora • Debora • Débora • Débora • Débora • Déborah • Déborah • DeixaElaEmPaz • Dian • Diego • Diniz • Djalma • Djosci • Eduardo • Eduardo • Elena • Eliane • Elimar • Elisa • Elizabete • Ellana • Emidia • Emmanuel • Érica • Érica • Erick • Erick • Erika • Eunicelli • Evandro • Eyder • Fabiana • Fabiana • Fabianne • Fábio • Fábio • Fabiola • Fabíola • Fau • Felipe • Felipe • Felipe • Felipe • Fernanda • Fernanda • Fernanda • Fernanda • Fernanda • Fernando • Flavia • Flávia • Flávio • Flora • Francine • Francisca • Gabriel • Gabriel • Gabriela • Gabriela • Gabriela • Gabriela • Gabriela • Gabriela • Geisa
-              </span>
+              
             </p>
           </div>
         </div>
