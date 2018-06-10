@@ -2,9 +2,9 @@
   <section class="depoimentos">
     <div class="container">
       <div class="depoimento">
-        <section-titulo>
-          Depoimentos
-        </section-titulo>
+        <div class="titulo">
+          <section-titulo>COMENTÁRIOS</section-titulo>
+        </div>
         <p>Lorem ipsum mi nostra posuere urna porttitor placerat,
           nisi aenean diam vestibulum congue dolor, sodales risus
           ante lacinia aptent hendrerit. risus eget condimentum sodales
@@ -26,9 +26,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .depoimentos {
-  background: lightgray;
+  background: #f8f9fa;
   padding: 30px 0;
 
   .depoimento {
@@ -44,6 +46,15 @@ export default {
     p {
       margin-bottom: 0;
       text-align: justify;
+    }
+  }
+  .titulo {
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: bolder;
+      color: #433D52;
+      margin-bottom: 50px;
+      font-size: 30px;
     }
   }
 }

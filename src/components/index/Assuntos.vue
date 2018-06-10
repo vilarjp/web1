@@ -84,6 +84,7 @@ export default {
         font-weight: bolder;
         color: #433D52;
         margin-bottom: 50px;
+        font-size: 30px;
       }
     }
     .assuntos-listagem {
@@ -92,10 +93,11 @@ export default {
     .btn-custom-2{
       color: #fff;
       font-weight: bolder;
+      font-size: 14px;
       font-family: 'Open Sans', sans-serif;
       background-color: #5F469F;
       border: none;
-      padding: 17px;
+      padding: 15px;
     }
     .btn-custom-2:hover{
       background-color: #433D52;

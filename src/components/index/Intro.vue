@@ -48,6 +48,8 @@ export default {
     display: flex;
     align-items: center;
   }
+.container{
+  z-index: 3;
 
   .intro {
     padding: 50px 0;
@@ -67,5 +69,6 @@ export default {
       }
     }
   }
+}
 }
 </style>
