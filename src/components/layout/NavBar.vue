@@ -7,13 +7,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-              <router-link :to="{ name: 'Index', params: {} }" class="nav-link">INICIAL</router-link>
+              <router-link :to="{ name: 'Index', params: {} }" class="nav-link">SOBRE</router-link>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#" >SOBRE NÓS</a>
+              <a class="nav-link" href="#">NEWS</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#">CITAÇÕES</a>
+              <a class="nav-link" href="#" >COMENTÁRIOS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">GRUPOS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">CONTATO</a>
             </li>
           </ul>
         </div>
