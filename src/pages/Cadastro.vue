@@ -10,11 +10,11 @@
           <form>
             <div class="campo">
               <label for="login">Login</label>
-              <input type="text" id="email">
+              <input type="text" id="login">
             </div>
             <div class="campo">
-              <label for="login">Nome</label>
-              <input type="text" id="email">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome">
             </div>
             <div class="campo">
               <label for="email">Email</label>
@@ -22,15 +22,15 @@
             </div>
             <div class="campo">
               <label for="senha"><b>Senha</b></label>
-              <input type="password">
+              <input type="password" id="senha">
             </div>
             <div class="campo">
-              <label for="senha">Confirme sua senha</label>
-              <input type="password">
+              <label for="senha2">Confirme sua senha</label>
+              <input type="password" id="senha2">
             </div>
             <div class="checkbox">
-              <input type="checkbox" name="" value="">
-              <label for="">Cadastrar como anônimo</label>
+              <input type="checkbox" id="anonimo">
+              <label for="anonimo">Cadastrar como anônimo</label>
             </div>
             <button type="submit" class="btn-custom">Confirmar</button>
           </form>
@@ -41,7 +41,11 @@
 </template>
 
 <script>
+import SectionTitulo from '@/components/basics/SectionTitulo'
 export default {
+  components: {
+    SectionTitulo
+  }
 }
 </script>
 
@@ -145,7 +149,7 @@ export default {
           background-color: #A592D9;
           width: 150px;
           height: 50px;
-          margin: 0 auto;
+          margin: 20px auto 0 auto;
           bottom: 20px;
           border: none;
           &:hover {

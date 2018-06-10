@@ -27,7 +27,11 @@
 </template>
 
 <script>
+import SectionTitulo from '@/components/basics/SectionTitulo'
 export default {
+  components: {
+    SectionTitulo
+  }
 }
 </script>
 
@@ -134,7 +138,7 @@ export default {
           background-color: #A592D9;
           width: 150px;
           height: 50px;
-          margin: 0 auto;
+          margin: 20px auto 0 auto;
           bottom: 20px;
           border: none;
           &:hover {

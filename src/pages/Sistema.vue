@@ -44,7 +44,7 @@
             </div>
             <div class="listagem">
               <relato/>
-              <depoimento v-for="i in 4"/>
+              <depoimento v-for="i in 4" :key="i"/>
             </div>
           </div>
         </div>
