@@ -94,6 +94,7 @@ export default {
     }
 
     .carrossel {
+      max-width: 100%;
       .citacao {
         padding: 0 60px;
         font-style: italic;
@@ -106,6 +107,18 @@ export default {
         font-size: 14px;
         opacity: 0.8;
       }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .depoimentos .depoimento .carrossel .citacao {
+    padding: 0;
+  }
+
+  .depoimentos {
+    .VueCarousel-navigation {
+      display: none;
     }
   }
 }

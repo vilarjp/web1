@@ -6,20 +6,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" @click="scrollDown('sobre')">
               <router-link :to="{ name: 'Index', params: {} }" class="nav-link">SOBRE</router-link>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#">NEWS</a>
+            <li class="nav-item dropdown" @click="scrollDown('news')">
+              <router-link :to="{ name: 'Index', params: {} }" class="nav-link">NEWS</router-link>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" >COMENTÁRIOS</a>
+            <li class="nav-item dropdown" @click="scrollDown('comentarios')">
+              <router-link :to="{ name: 'Index', params: {} }" class="nav-link">COMENTÁRIOS</router-link>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#">APOIO</a>
+            <li class="nav-item dropdown" @click="scrollDown('apoio')">
+              <router-link :to="{ name: 'Index', params: {} }" class="nav-link">APOIO</router-link>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#">CONTATO</a>
+            <li class="nav-item dropdown" @click="scrollDown('contato')">
+              <router-link :to="{ name: 'Index', params: {} }" class="nav-link">CONTATO</router-link>
             </li>
           </ul>
         </div>
@@ -39,6 +39,72 @@
 
 <script>
 export default {
+  methods: {
+    scrollDown(position) {
+      let pageWidth = window.innerWidth
+
+      if(position == 'sobre') {
+        if(pageWidth >= 992 ) {
+          window.scroll({ top: 565, left: 0, behavior: 'smooth' });
+        } else {
+          window.scroll({ top: 800, left: 0, behavior: 'smooth' });
+        }
+      }
+
+      else if(position == 'news') {
+        if(pageWidth >= 1200 ) {
+          window.scroll({ top: 1115, left: 0, behavior: 'smooth' });
+        } else if(pageWidth < 1200 && pageWidth >= 992 ) {
+          window.scroll({ top: 1200, left: 0, behavior: 'smooth' });
+        } else if(pageWidth < 992 && pageWidth >= 768) {
+          window.scroll({ top: 1530, left: 0, behavior: 'smooth' });
+        } else if(pageWidth < 768 && pageWidth >= 425) {
+          window.scroll({ top: 1910, left: 0, behavior: 'smooth' });
+        } else if(pageWidth < 425 && pageWidth >= 375) {
+          window.scroll({ top: 2000, left: 0, behavior: 'smooth' });
+        } else {
+          window.scroll({ top: 2150, left: 0, behavior: 'smooth' });
+        }
+      }
+
+      else if(position == 'comentarios') {
+        if(pageWidth >= 1200 ) {
+          window.scroll({ top: 1300, left: 0, behavior: 'smooth' });
+        }
+        else if(pageWidth < 1200 && pageWidth >= 992) {
+          window.scroll({ top: 1400, left: 0, behavior: 'smooth' });
+        }
+        else if(pageWidth < 992 && pageWidth >= 768) {
+          window.scroll({ top: 1530, left: 0, behavior: 'smooth' });
+        }
+        else if(pageWidth < 768 && pageWidth >= 425) {
+          window.scroll({ top: 2200, left: 0, behavior: 'smooth' });
+        }
+        else if(pageWidth < 425 && pageWidth >= 375) {
+          window.scroll({ top: 2270, left: 0, behavior: 'smooth' });
+        } else {
+          window.scroll({ top: 2550, left: 0, behavior: 'smooth' });
+        }
+      }
+
+      else if(position == 'apoio') {
+        if(pageWidth >= 1200 ) {
+          window.scroll({ top: 2500, left: 0, behavior: 'smooth' });
+        }
+        else if (pageWidth < 1200 && pageWidth >= 767) {
+            window.scroll({ top: 2500, left: 0, behavior: 'smooth' });
+        }
+        else if (pageWidth < 767 && pageWidth >= 425) {
+            window.scroll({ top: 1500, left: 0, behavior: 'smooth' });
+        }
+      }
+
+      else {
+        window.scroll({ top: 9999, left: 0, behavior: 'smooth' });
+      }
+
+    }
+  }
 }
 </script>
 
@@ -137,9 +203,40 @@ export default {
   }
 }
 
+@media (max-width: 767px) {
+
+  header {
+    .left {
+      width: 140px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
 @media (max-width: 991px) {
 
+  header {
+    a {
+      margin: 0 !important;
+      width: 100%;
+      height: 100%;
+    }
+
+    .navbar-brand {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   .navbar {
+    margin-bottom: 20px;
     .form-inline .form-control {
       width: 100%;
     }

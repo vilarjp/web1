@@ -122,7 +122,10 @@ export default {
     text-align: justify;
   }
 
-  @media (max-width: ) {
-
+  @media (max-width: 767px) {
+    .assuntos .botao-direita button {
+      align-self: center;
+      margin-bottom: 30px;
+    }
   }
 </style>
