@@ -3,14 +3,29 @@
     <div class="cadastro-mask">
       <div class="container">
         <div class="formulario">
-          <h1>Cadastro</h1>
+          <div class="titulo">
+            <section-titulo>JUNTE-SE A NÓS</section-titulo>
+          </div>
+          <p>Seus dados não serão divulgados em hipótese alguma.</p>
           <form>
+            <div class="campo">
+              <label for="login">Login</label>
+              <input type="text" id="email">
+            </div>
+            <div class="campo">
+              <label for="login">Nome</label>
+              <input type="text" id="email">
+            </div>
             <div class="campo">
               <label for="email">Email</label>
               <input type="text" id="email">
             </div>
             <div class="campo">
-              <label for="senha">Senha</label>
+              <label for="senha"><b>Senha</b></label>
+              <input type="password">
+            </div>
+            <div class="campo">
+              <label for="senha">Confirme sua senha</label>
               <input type="password">
             </div>
             <div class="checkbox">
@@ -31,6 +46,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
   .cadastro {
     background: url('../assets/foto_index.jpg');
@@ -42,7 +59,8 @@ export default {
     flex: 1;
 
     .cadastro-mask {
-      background: linear-gradient(to bottom right, rgba(177, 162, 217, 0.5), rgba(49, 37, 82, 0.9));
+      background: #312552;
+      opacity: 0.9;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -61,6 +79,8 @@ export default {
       width: 400px;
       margin: 0 auto;
       color: #fff;
+
+
       @media (max-width: 767px) {
         width: auto;
       }
@@ -71,20 +91,42 @@ export default {
         margin: 0;
       }
 
+      .titulo {
+          font-family: 'Roboto', sans-serif;
+          font-weight: bolder;
+          color: #fff;
+          margin-bottom: 30px;
+          font-size: 30px;
+      }
+
+      p{
+        font-size: 14px;
+        color: #fff;
+        font-weight: bolder;
+        font-family: 'Open Sans', sans-serif;
+        text-align: justify;
+      }
+
       form {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bolder;
+        font-size: 14px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
         margin-top: 10px;
 
-        .campo {
+         .campo input {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          width: 100%;
-          height: 50px;
+          width: 340px;
+          height: 40px;
           margin-bottom: 30px;
+          border: none;
+          padding: 10px;
+          opacity: 0.4;
         }
 
         .checkbox {
@@ -96,15 +138,20 @@ export default {
         }
 
         .btn-custom {
+          color: #fff;
+          font-weight: bolder;
+          font-size: 14px;
+          font-family: 'Open Sans', sans-serif;
+          background-color: #A592D9;
+          width: 150px;
+          height: 50px;
+          margin: 0 auto;
+          bottom: 20px;
           border: none;
-          background: pink;
-          width: 100px;
-          border-radius: 3px;
-          margin: 10px auto 0 auto;
-          text-align: center;
-
           &:hover {
             cursor: pointer;
+            background-color: #5F469F;
+            border: none;
           }
         }
 

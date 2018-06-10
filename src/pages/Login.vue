@@ -1,26 +1,26 @@
 <template lang="html">
-  <div class="login">
-    <div class="container">
-      <div class="formulario">
-        <h1>Entrar</h1>
-        <form>
-          <div class="campo" :class="{'animacao' : selected == 1 || email}">
-            <label for="email">Email</label>
-            <input type="text" id="email" v-model="email" @focus="selected = 1" @blur="selected = 0">
+  <div class="login_tela">
+    <div class="login-mask">
+      <div class="container">
+        <div class="formulario">
+          <div class="titulo">
+            <section-titulo>LOGIN</section-titulo>
           </div>
-          <div class="campo" :class="{'animacao' : selected == 2 || senha}">
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" v-model="senha" @focus="selected = 2" @blur="selected = 0">
-          </div>
-          <a href="#">Esqueceu seu email ou senha?</a>
-          <button type="submit" class="btn-custom">Entrar</button>
-          <div class="login-face">
-            <a href="#">
-              <i class="fa fa-facebook-official" aria-hidden="true"></i>
-              Conectar com Facebook
-            </a>
-          </div>
-        </form>
+          <form>
+            <div class="campo">
+              <label for="login">Login</label>
+              <input type="text" id="email">
+            </div>
+            <div class="campo">
+              <label for="senha"><b>Senha</b></label>
+              <input type="password">
+            </div>
+            <div class="link">
+              <a href="#">Esqueceu a senha ?</a>
+            </div>
+            <button type="submit" class="btn-custom">Entrar</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -28,29 +28,45 @@
 
 <script>
 export default {
-  data() {
-    return {
-      email: '',
-      senha: '',
-      selected: 0
-    }
-  }
 }
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-  .login {
-    margin: auto 0;
+  .login_tela {
+    background: url('../assets/foto_index.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .login-mask {
+      background: #312552;
+      opacity: 0.9;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .container {
+        margin: auto;
+      }
+    }
+
     .formulario {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      border: 1px solid gray;
       padding: 40px 30px;
       width: 400px;
       margin: 0 auto;
+      color: #fff;
+
+
       @media (max-width: 767px) {
         width: auto;
       }
@@ -61,76 +77,73 @@ export default {
         margin: 0;
       }
 
+      .titulo {
+          font-family: 'Roboto', sans-serif;
+          font-weight: bolder;
+          color: #fff;
+          margin-bottom: 30px;
+          font-size: 30px;
+      }
+
+      p{
+        font-size: 14px;
+        color: #fff;
+        font-weight: bolder;
+        font-family: 'Open Sans', sans-serif;
+        text-align: justify;
+      }
+
       form {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bolder;
+        font-size: 14px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
         margin-top: 10px;
 
-        .campo {
+        a{
+          color:white;
+        }
+         .campo input {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          width: 100%;
-          height: 50px;
-          margin-bottom: 20px;
-
-          label {
-            margin: 20px 0 0 0;
-          }
-
-          input {
-            border: none;
-            border-bottom: 1px solid gray;
-            height: 0;
-          }
+          width: 340px;
+          height: 40px;
+          margin-bottom: 30px;
+          border: none;
+          padding: 10px;
+          opacity: 0.4;
         }
 
-        .animacao {
-
+        .checkbox {
+          display: flex;
+          align-items: center;
           label {
-            margin: 0;
-            opacity: 0.6;
-          }
-
-          input {
-            height: auto;
-            padding: 0 5px;
-          }
-        }
-
-        a {
-          text-decoration: underline;
-          color: #000;
-
-          &:hover {
-            color: lightblue;
+            margin: 0 0 0 5px;
           }
         }
 
         .btn-custom {
+          color: #fff;
+          font-weight: bolder;
+          font-size: 14px;
+          font-family: 'Open Sans', sans-serif;
+          background-color: #A592D9;
+          width: 150px;
+          height: 50px;
+          margin: 0 auto;
+          bottom: 20px;
           border: none;
-          background: lightgray;
-          width: 100%;
-          margin: 5px 0 20px 0;
-
           &:hover {
             cursor: pointer;
+            background-color: #5F469F;
+            border: none;
           }
         }
-        .login-face {
 
-          a {
-            text-decoration: none;
-            display: flex;
-
-            .fa {
-              margin-right: 15px;
-              font-size: 36px;
-            }
-          }
-        }
       }
     }
   }
