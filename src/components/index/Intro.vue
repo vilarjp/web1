@@ -29,13 +29,14 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .introducao {
-  background: url('../../assets/foto_index.jpg') no-repeat 10%;
+  background: url('../../assets/foto_index.jpg');
   position: relative;
   z-index: 1;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 400px;
 
   .sobreposicao{
     background: linear-gradient(to bottom right, #B1A2D9, #312552);
@@ -43,6 +44,9 @@ export default {
     color: #ffffff;
     opacity: 0.8;
     z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .intro {

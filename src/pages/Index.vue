@@ -2,6 +2,7 @@
   <div class="index">
     <intro/>
     <assuntos/>
+    <news/>
     <depoimentos/>
     <grupos/>
     <contato/>
