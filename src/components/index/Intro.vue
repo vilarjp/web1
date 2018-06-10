@@ -57,7 +57,7 @@ export default {
 
       h2{
         color:#B1A2D9;
-          font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-size: 45px;
         font-weight: bolder;
       }
