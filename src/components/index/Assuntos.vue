@@ -9,7 +9,7 @@
           <section-titulo>VAMOS FALAR SIM</section-titulo>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-6">
+          <div class="col-md-6 col-lg-6 botao-direita">
             <p class="text_sobre">Lorem ipsum mi nostra posuere urna porttitor placerat,
               nisi aenean diam vestibulum congue dolor, sodales risus
               ante lacinia aptent hendrerit. risus eget condimentum sodales
@@ -62,6 +62,19 @@ export default {
       .fa-angle-down {
         font-weight: bold;
         font-size: 80px;
+      }
+    }
+
+    .botao-direita {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        align-self: flex-end;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
