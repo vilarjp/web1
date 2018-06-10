@@ -4,6 +4,7 @@
     <assuntos/>
     <depoimentos/>
     <grupos/>
+    <contato/>
   </div>
 </template>
 
@@ -12,12 +13,14 @@ import Intro from '@/components/index/Intro'
 import Assuntos from '@/components/index/Assuntos'
 import Depoimentos from '@/components/index/Depoimentos'
 import Grupos from '@/components/index/Grupos'
+import Contato from '@/components/index/Contato'
 export default {
   components: {
     Intro,
     Assuntos,
     Depoimentos,
-    Grupos
+    Grupos,
+    Contato
   }
 }
 </script>
