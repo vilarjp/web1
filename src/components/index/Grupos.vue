@@ -40,10 +40,12 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel';
+import SectionTitulo from '@/components/basics/SectionTitulo'
 export default {
   components: {
     Carousel,
-    Slide
+    Slide,
+    SectionTitulo
   }
 }
 </script>
@@ -53,6 +55,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
   .section-grupos {
+    padding: 30px 0;
     .grupos {
       display: flex;
       justify-content: center;
@@ -78,7 +81,6 @@ export default {
 
       .carrossel {
         max-width: 100%;
-        margin-bottom: 30px;
 
         .VueCarousel {
           text-align: center;
@@ -92,6 +94,12 @@ export default {
               height: 100%;
               object-fit: cover;
             }
+          }
+
+          li.VueCarousel-dot.VueCarousel-dot--active,
+          li.VueCarousel-dot {
+            margin: 20px 0 0 0 !important;
+            padding: 0 10px !important;
           }
         }
       }
