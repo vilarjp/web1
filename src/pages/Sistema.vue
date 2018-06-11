@@ -91,6 +91,7 @@ export default {
       display: flex;
       flex-direction: column;
       padding: 0 30px;
+      min-height: 170px;
 
       .perfil {
         display: flex;
