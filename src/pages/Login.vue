@@ -18,7 +18,9 @@
             <div class="link">
               <a href="#">Esqueceu a senha ?</a>
             </div>
-            <button type="submit" class="btn-custom">Entrar</button>
+            <button type="submit" class="btn-custom">
+              <router-link :to="{ name: 'Sistema', params: {} }" class="nav-link">Entrar</router-link>
+            </button>
           </form>
         </div>
       </div>

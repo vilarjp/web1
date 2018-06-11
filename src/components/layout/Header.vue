@@ -1,5 +1,5 @@
 <template lang="html">
-  <header>
+  <header v-if="rota != 'Sistema'">
       <div class="container">
         <div class="header">
           <div class="left">
@@ -36,6 +36,16 @@
 
 <script>
 export default {
+  data() {
+    return {
+      rota: ''
+    }
+  },
+  watch: {
+    '$route' (to, from) {
+      this.rota = to.name
+    }
+  }
 }
 </script>
 
