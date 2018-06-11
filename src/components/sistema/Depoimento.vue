@@ -23,17 +23,23 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
   .depoimento {
-    display: flex;
-    flex-direction: column;
-    background: gray;
-    margin-bottom: 30px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    margin: 30px 0;
     padding: 30px 30px;
+    background: #fff;
 
     .texto {
       p {
         font-style: italic;
+        font-family: 'Open Sans';
+        font-weight: bold;
+        color:#4f4f4f;
       }
     }
 
@@ -50,11 +56,12 @@ export default {
       button {
         background: transparent;
         border: none;
+        color:#4f4f4f;
 
         &:hover,
         &:focus {
           cursor: pointer;
-          background: red;
+          color: #5F469F;
         }
       }
     }

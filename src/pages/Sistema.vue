@@ -7,7 +7,7 @@
             <div class="menu">
               <div class="perfil">
                 <div class="foto">
-                  <img src="https://www.shareicon.net/data/2016/05/26/771193_people_512x512.png" alt="">
+                  <img src="https://www.shareicon.net/data/2016/08/18/815363_face_512x512.png" alt="">
                 </div>
                 <div class="menu-drop">
                   <i class="fa fa-bars" aria-hidden="true"></i>
@@ -15,7 +15,7 @@
               </div>
               <div class="submenu">
                 <div class="nome">
-                  <span>Anônimo</span>
+                  <span>Nome Anônimo</span>
                 </div>
                 <div class="arrow-down">
                   <div class="btn-group">
@@ -24,11 +24,9 @@
                       <span class="sr-only">Toggle Dropdown</span>
                     </button> -->
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="#">Maria Silva</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Separated link</a>
+                      <a class="dropdown-item" href="#">Configurar priva</a>
                     </div>
                   </div>
                   <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> -->
@@ -37,14 +35,17 @@
             </div>
             <div class="navegacao">
               <ul>
-                <li>
+                <li class="claro">
                   <a href="#">Feed</a>
+                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
                 </li>
-                <li>
+                <li class="medio">
                   <a href="#">Meus grupos</a>
+                  <i class="fa fa-users" aria-hidden="true"></i>
                 </li>
-                <li>
+                <li class="escuro">
                   <a href="#">Fóruns</a>
+                  <i class="fa fa-list-ul" aria-hidden="true"></i>
                 </li>
               </ul>
             </div>
@@ -52,9 +53,6 @@
         </div>
         <div class="col-md-8">
           <div class="sistema-lista">
-            <div class="search-bar">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </div>
             <div class="listagem">
               <relato/>
               <depoimento v-for="i in 4" :key="i"/>
@@ -78,20 +76,24 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .sistema {
-  background: lightgray;
+  background: #F2F2F2;
   .side-bar {
     display: flex;
     flex-direction: column;
     height: 100%;
 
     .menu {
-      background: gray;
+      background: #312552;
       display: flex;
       flex-direction: column;
       padding: 0 30px;
       min-height: 170px;
+      color:white;
+
 
       .perfil {
         display: flex;
@@ -106,6 +108,7 @@ export default {
           img {
             max-width: 100%;
             max-height: 100%;
+            border-radius: 50%;
           }
         }
 
@@ -123,7 +126,8 @@ export default {
         margin-bottom: 20px;
 
         .nome {
-
+          font-family: 'Open Sans';
+          font-weight: bolder;
         }
 
         .arrow-down {
@@ -143,11 +147,21 @@ export default {
         list-style: none;
         margin: 0;
         padding: 0;
+        font-family: 'Open Sans';
+
+        font-weight: bolder;
 
         li {
           margin-bottom: 20px;
           a {
-            color: #000;
+            color: #4f4f4f;
+          }
+          i{
+            color:#4f4f4f;
+            opacity: 0.5;
+          }
+          i:hover{
+            color:#5F469F;
           }
         }
       }

@@ -7,8 +7,8 @@
       <form>
         <textarea></textarea>
         <div class="botoes">
-          <button type="reset">Limpar</button>
-          <button type="submit">Enviar</button>
+          <a class="btn-custom1" href="#">Limpar</a>
+          <button type="submit" class="btn-custom2">Enviar</button>
         </div>
       </form>
     </div>
@@ -21,15 +21,23 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
   .relato {
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     margin: 30px 0;
     padding: 30px 30px;
     background: #fff;
+
     .titulo {
       h1 {
-        font-size: 24px;
+        font-family: 'Open Sans';
+        font-size: 16px;
         margin-bottom: 20px;
+        color: #312552;
       }
     }
 
@@ -44,12 +52,35 @@ export default {
           display: flex;
           justify-content: flex-end;
 
-          button {
-            border: none;
-            background: transparent;
+          .btn-custom1 {
+            color: #312552;
+            font-weight: bolder;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            margin: 26px 0 0 0;
+            bottom: 20px;
 
-            &:last-child {
-              margin-left: 30px;
+            &:hover {
+              cursor: pointer;
+              color: #5F469F;
+            }
+          }
+
+          .btn-custom2 {
+            color: #fff;
+            font-weight: bolder;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #312552;
+            width: 100px;
+            height: 40px;
+            margin: 20px 0 0 auto;
+            bottom: 20px;
+            border: none;
+            &:hover {
+              cursor: pointer;
+              background-color: #5F469F;
+              border: none;
             }
           }
         }
