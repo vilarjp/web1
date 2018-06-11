@@ -49,6 +49,11 @@ export default {
       this.rota = to.name
     }
   },
+  mounted() {
+    if(this.$route.name == 'Sistema') {
+      this.rota = 'Sistema'
+    }
+  },
   methods: {
     scrollDown(position) {
       let pageWidth = window.innerWidth
