@@ -4,10 +4,10 @@
       <h1>Escreva aqui o seu relato</h1>
     </div>
     <div class="formulario">
-      <form>
-        <textarea></textarea>
+      <form v-on:submit.prevent="enviarRelato">
+        <textarea v-model="relato.conteudo"></textarea>
         <div class="botoes">
-          <a class="btn-custom1" href="#">Limpar</a>
+          <button type="reset" class="btn-custom1">Limpar</button>
           <button type="submit" class="btn-custom2">Enviar</button>
         </div>
       </form>
@@ -16,7 +16,33 @@
 </template>
 
 <script>
+import axios from 'axios'
+import { EventBus } from '@/main.js'
+
 export default {
+  data() {
+    return {
+      relato: {
+        apoiado: false,
+        conteudo: '',
+        curtidas: 0
+      }
+    }
+  },
+  methods: {
+    enviarRelato() {
+      if(this.relato.conteudo) {
+        axios.post('https://web1-3c5f8.firebaseio.com/depoimentos.json', this.relato)
+          .then(response => {
+            this.enviaRelato()
+          })
+      }
+    },
+    enviaRelato(){
+      this.relato.conteudo = ''
+      EventBus.$emit('enviado', event)
+    }
+  }
 }
 </script>
 
@@ -46,6 +72,7 @@ export default {
         textarea {
           width: 100%;
           height: 100px;
+          border: 1px solid gray;
         }
 
         .botoes {
@@ -54,11 +81,13 @@ export default {
 
           .btn-custom1 {
             color: #312552;
-            font-weight: bolder;
+            font-weight: bold;
             font-size: 14px;
             font-family: 'Open Sans', sans-serif;
             margin: 26px 0 0 0;
             bottom: 20px;
+            background: transparent;
+            border: none;
 
             &:hover {
               cursor: pointer;
@@ -68,7 +97,7 @@ export default {
 
           .btn-custom2 {
             color: #fff;
-            font-weight: bolder;
+            font-weight: bold;
             font-size: 14px;
             font-family: 'Open Sans', sans-serif;
             background-color: #312552;

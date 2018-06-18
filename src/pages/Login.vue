@@ -8,12 +8,12 @@
           </div>
           <form>
             <div class="campo">
-              <label for="login">Login</label>
-              <input type="text" id="email">
+              <label for="email">E-mail</label>
+              <input type="text" id="email" v-model="email">
             </div>
             <div class="campo">
               <label for="senha"><b>Senha</b></label>
-              <input type="password">
+              <input id="senha" type="password" v-model="senha">
             </div>
             <div class="link">
               <a href="#">Esqueceu a senha ?</a>
@@ -30,9 +30,17 @@
 
 <script>
 import SectionTitulo from '@/components/basics/SectionTitulo'
+import firebase from 'firebase'
+
 export default {
   components: {
     SectionTitulo
+  },
+  data() {
+    return {
+      email: '',
+      senha: ''
+    }
   }
 }
 </script>

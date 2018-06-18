@@ -1,62 +1,56 @@
 <template lang="html">
   <div class="sistema">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="side-bar">
-            <div class="menu">
-              <div class="perfil">
-                <div class="foto">
-                  <img src="https://www.shareicon.net/data/2016/08/18/815363_face_512x512.png" alt="">
-                </div>
-                <div class="menu-drop">
-                  <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
+    <div class="row">
+      <div class="col-lg-4 col-xl-2">
+        <div class="side-bar">
+          <div class="menu">
+            <div class="perfil">
+              <div class="foto">
+                <img src="https://www.shareicon.net/data/2016/08/18/815363_face_512x512.png" alt="">
               </div>
-              <div class="submenu">
-                <div class="nome">
-                  <span>Nome Anônimo</span>
-                </div>
-                <div class="arrow-down">
-                  <div class="btn-group">
-                    <i class="fa fa-angle-down" aria-hidden="true" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                    <!-- <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span class="sr-only">Toggle Dropdown</span>
-                    </button> -->
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Maria Silva</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Configurar priva</a>
-                    </div>
-                  </div>
-                  <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> -->
-                </div>
+              <div class="menu-drop">
+                <i class="fa fa-bars" aria-hidden="true"></i>
               </div>
             </div>
-            <div class="navegacao">
-              <ul>
-                <li class="claro">
-                  <a href="#">Feed</a>
-                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                </li>
-                <li class="medio">
-                  <a href="#">Meus grupos</a>
-                  <i class="fa fa-users" aria-hidden="true"></i>
-                </li>
-                <li class="escuro">
-                  <a href="#">Fóruns</a>
-                  <i class="fa fa-list-ul" aria-hidden="true"></i>
-                </li>
-              </ul>
+            <div class="submenu">
+              <div class="nome">
+                <span>Nome Anônimo</span>
+              </div>
+              <div class="arrow-down">
+                <div class="btn-group">
+                  <i class="fa fa-angle-down" aria-hidden="true" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Maria Silva</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Configurar privacidade</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="navegacao">
+            <ul>
+              <li class="claro">
+                <router-link :to="{ name: 'Index', params: {} }">Feed</router-link> 
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              </li>
+              <li class="medio">
+                <a href="#">Meus grupos</a>
+                <i class="fa fa-users" aria-hidden="true"></i>
+              </li>
+              <li class="escuro">
+                <a href="#">Fóruns</a>
+                <i class="fa fa-list-ul" aria-hidden="true"></i>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-8">
-          <div class="sistema-lista">
-            <div class="listagem">
-              <relato/>
-              <depoimento v-for="i in 4" :key="i"/>
-            </div>
+      </div>
+      <div class="col-lg-8 col-xl-10">
+        <div class="sistema-lista">
+          <div class="listagem">
+            <relato/>
+            <depoimento/>
           </div>
         </div>
       </div>
@@ -81,6 +75,9 @@ export default {
 
 .sistema {
   background: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   .side-bar {
     display: flex;
     flex-direction: column;
@@ -148,11 +145,16 @@ export default {
         margin: 0;
         padding: 0;
         font-family: 'Open Sans';
-
-        font-weight: bolder;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
 
         li {
           margin-bottom: 20px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
           a {
             color: #4f4f4f;
           }
@@ -171,11 +173,17 @@ export default {
   .sistema-lista {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding-right: 30px;
 
     .search-bar {
       align-self: flex-end;
     }
+  }
+}
+
+@media (max-width: 991px) {
+  .sistema .sistema-lista {
+    padding: 0;
   }
 }
 </style>

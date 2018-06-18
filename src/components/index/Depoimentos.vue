@@ -1,7 +1,7 @@
 <template lang="html">
   <section class="depoimentos">
     <div class="container">
-      <div class="depoimento">
+      <div class="depoimento-index">
         <div class="titulo">
           <section-titulo>COMENTÁRIOS</section-titulo>
         </div>
@@ -77,7 +77,7 @@ export default {
   background: #f8f9fa;
   padding: 30px 0;
 
-  .depoimento {
+  .depoimento-index {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +112,7 @@ export default {
 }
 
 @media (max-width: 767px) {
-  .depoimentos .depoimento .carrossel .citacao {
+  .depoimentos .depoimento-index .carrossel .citacao {
     padding: 0;
   }
 

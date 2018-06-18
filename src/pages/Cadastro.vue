@@ -7,26 +7,26 @@
             <section-titulo>JUNTE-SE A NÓS</section-titulo>
           </div>
           <p>Seus dados não serão divulgados em hipótese alguma.</p>
-          <form>
+          <form v-on:submit.prevent="signUp">
             <div class="campo">
               <label for="login">Login</label>
-              <input type="text" id="login">
+              <input type="text" id="login" v-model="usuario.login">
             </div>
             <div class="campo">
               <label for="nome">Nome</label>
-              <input type="text" id="nome">
+              <input type="text" id="nome" v-model="usuario.nome">
             </div>
             <div class="campo">
               <label for="email">Email</label>
-              <input type="text" id="email">
+              <input type="text" id="email" v-model="usuario.email">
             </div>
             <div class="campo">
               <label for="senha"><b>Senha</b></label>
-              <input type="password" id="senha">
+              <input type="password" id="senha" v-model="usuario.senha">
             </div>
             <div class="campo">
               <label for="senha2">Confirme sua senha</label>
-              <input type="password" id="senha2">
+              <input type="password" id="senha2" v-model="usuario.senha2">
             </div>
             <div class="checkbox">
               <input type="checkbox" id="anonimo">
@@ -42,9 +42,34 @@
 
 <script>
 import SectionTitulo from '@/components/basics/SectionTitulo'
+import firebase from 'firebase'
+
 export default {
   components: {
     SectionTitulo
+  },
+  data() {
+    return {
+      usuario: {
+        login: '',
+        nome: '',
+        email: '',
+        senha: '',
+        senha2: ''
+      }
+    }
+  },
+  methods: {
+    signUp() {
+      firebase.auth().createUserWithEmailAndPassword(this.usuario.email, this.usuario.senha).then(
+        function (user) {
+          alert('Cadastro realizado com sucesso')
+        },
+        function (err) {
+          alert('Erro: ' + err.message)
+        }
+      )
+    }
   }
 }
 </script>

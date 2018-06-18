@@ -1,24 +1,86 @@
 <template lang="html">
-  <div class="depoimento">
-    <div class="texto">
-      <p>“Lorem ipsum mi nostra posuere urna porttitor placerat, nisi aenean diam vestibulum congue dolor,
-        sodales risus ante lacinia aptent hendrerit. risus eget condimentum sodales dapibus interdum mattis
-        nostra urna, quam blandit sit adipiscing libero lacus pretium enim, placerat eleifend sodales.”</p>
-    </div>
-    <div class="form">
-      <input type="text" placeholder="Responder">
-    </div>
-    <div class="apoio">
-      <button>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        Apoiar
-      </button>
+  <div class="depoimentos">
+    <div class="depoimento" v-for="depoimento in depoimentos">
+      <div class="texto">
+        <p v-html="depoimento.conteudo"></p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Responder">
+      </div>
+      <div class="apoio">
+        <button v-if="!depoimento.apoiado" @click="toggleApoio(depoimento.id, true, depoimento.curtidas)">
+          <i class="fa fa-heart" aria-hidden="true"></i>
+          Apoiar
+        </button>
+        <button class="apoiado" v-else @click="toggleApoio(depoimento.id, false, depoimento.curtidas)">
+          <i class="fa fa-heart" aria-hidden="true"></i>
+          Apoiado
+        </button>
+        <p v-html="'Likes: ' + depoimento.curtidas"></p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+import { EventBus } from '@/main.js'
+
 export default {
+  data() {
+    return {
+      depoimentos: [],
+      apoiado: ''
+    }
+  },
+  methods: {
+    postarDepoimento() {
+      axios.post('https://web1-3c5f8.firebaseio.com/depoimentos.json', this.depoimento)
+    },
+    toggleApoio(id, status, curtidas) {
+      let url = 'https://web1-3c5f8.firebaseio.com/depoimentos/' + id + '/apoiado.json'
+      axios.put(url, status)
+        .then(response => {
+          let urll = 'https://web1-3c5f8.firebaseio.com/depoimentos/' + id + '/curtidas.json'
+          if(status == true) {
+            curtidas++
+          } else {
+            curtidas--
+          }
+          axios.put(urll, curtidas)
+            .then(response => {
+              this.getDepoimentos()
+            })
+        })
+    },
+    getDepoimentos() {
+      axios.get('https://web1-3c5f8.firebaseio.com/depoimentos.json')
+        .then(response => {
+          const data = response.data
+          let depoimentoTratado
+          let depoimentosTratados = []
+          for(let depoimento in data) {
+            depoimentoTratado = {
+              conteudo: data[depoimento].conteudo,
+              id: depoimento,
+              apoiado: data[depoimento].apoiado,
+              curtidas: data[depoimento].curtidas,
+            }
+            this.apoiado = data[depoimento].apoiado
+            depoimentosTratados.push(depoimentoTratado)
+          }
+          this.depoimentos = depoimentosTratados.reverse()
+        })
+    }
+  },
+  mounted() {
+    this.getDepoimentos()
+  },
+  created() {
+    EventBus.$on('enviado', event => {
+      this.getDepoimentos()
+    })
+  }
 }
 </script>
 
@@ -53,6 +115,9 @@ export default {
 
     .apoio {
       margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       button {
         background: transparent;
         border: none;
@@ -63,6 +128,15 @@ export default {
           cursor: pointer;
           color: #5F469F;
         }
+
+        &.apoiado {
+          background: pink;
+          padding: 5px 10px;
+        }
+      }
+
+      p {
+        margin: 0;
       }
     }
   }
