@@ -29,7 +29,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .introducao {
-  background: url('../../assets/foto_index.jpg');
+  background: url('https://raw.githubusercontent.com/vilarjp/web1/master/src/assets/foto_index.jpg');
   position: relative;
   z-index: 1;
   background-attachment: fixed;

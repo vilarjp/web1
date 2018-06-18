@@ -3,7 +3,7 @@
       <div class="container">
         <div class="header">
           <div class="left">
-            <router-link :to="{ name: 'Index', params: {} }" class="navbar-brand"><img src="@/assets/logoRuim.png" alt=""></router-link>
+            <router-link :to="{ name: 'Index', params: {} }" class="navbar-brand"><img src="../../assets/logoRuim.png" alt=""></router-link>
           </div>
           <div class="right">
             <ul>

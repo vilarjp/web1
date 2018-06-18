@@ -50,7 +50,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
   .login_tela {
-    background: url('../assets/foto_index.jpg');
+    background: url('https://raw.githubusercontent.com/vilarjp/web1/master/src/assets/foto_index.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
