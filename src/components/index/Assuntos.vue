@@ -16,7 +16,9 @@
               dapibus interdum mattis nostra urna, quam blandit sit adipiscing
               libero lacus pretium enim, placerat eleifend sodales. <b>Fames
               adipiscing fringilla felis.</b></p>
-              <button type="submit" class="btn-custom-2">Junte-se a nós</button>
+              <button type="submit" class="btn-custom-2">
+                <router-link :to="{ name: 'Cadastro', params: {} }">Junte-se a nós</router-link>
+              </button>
           </div>
           <div class="col-md-6 col-lg-6">
             <p class="text_nomes">
@@ -98,6 +100,14 @@ export default {
       background-color: #5F469F;
       border: none;
       padding: 15px;
+
+      a {
+        color: #fff;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
     .btn-custom-2:hover{
       background-color: #433D52;

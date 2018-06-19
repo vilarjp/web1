@@ -31,7 +31,7 @@
           <div class="navegacao">
             <ul>
               <li class="claro">
-                <router-link :to="{ name: 'Index', params: {} }">Feed</router-link> 
+                <a href="#">Feed</a>
                 <i class="fa fa-paper-plane" aria-hidden="true"></i>
               </li>
               <li class="medio">
@@ -41,6 +41,10 @@
               <li class="escuro">
                 <a href="#">Fóruns</a>
                 <i class="fa fa-list-ul" aria-hidden="true"></i>
+              </li>
+              <li class="escuro">
+                <router-link :to="{ name: 'Index', params: {} }">Sair</router-link>
+                <i class="fa fa-power-off" aria-hidden="true"></i>
               </li>
             </ul>
           </div>
