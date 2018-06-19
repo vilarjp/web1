@@ -8,11 +8,11 @@
 # Clonar o projeto
 git clone https://github.com/vilarjp/web1
 
-# Alterar para a branch gh-pages
-git checkout gh-pages
-
 # Entrar na página do projeto
 cd web1
+
+# Alterar para a branch gh-pages
+git checkout gh-pages
 
 # Instalar as dependências (É preciso ter o nodejs e o npm instalados previamente)
 npm install
